@@ -53,7 +53,6 @@ zip "iTerm" {
   not_if = "ls -la /Applications/ | grep 'iTerm.app'"
 }
 
-
 // Install Atom from their website (.app bundle within the zip)
 zip "Atom" {
   source = "https://atom-installer.github.com/v1.34.0/atom-mac.zip?ext=.zip"
@@ -70,7 +69,7 @@ dmg "Docker" {
 
 git "dotfiles" {
   source = "https://github.com/mikemackintosh/dotfiles"
-  destination = "~/.dotfiles_test"
+  destination = "~/.dotfiles"
   branch = "master"
   depends_on = "Accept Xcode License"
   path = "/usr/bin/git"
